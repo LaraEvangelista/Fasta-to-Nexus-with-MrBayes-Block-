@@ -1,6 +1,6 @@
 import os
 import unittest
-import Homework
+import Fasta_to_Nexus
 
 class Test_Fasta_To_Nexus(unittest.TestCase):
     def test_parse_fasta(self):
