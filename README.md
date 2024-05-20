@@ -3,7 +3,7 @@ This repository contains a Python script that converts a FASTA file to a NEXUS f
 
 ## Files
 - `Fasta_to_Nexus.py`: Main script to convert FASTA to NEXUS, appending a MrBayes block and printing it to the console. 
-- `test_fasta_to_nexus.py`: Unit tests for the functions in `Fasta_to_Nexus.py`.
+- `Unit_Testing_Fasta_to_Nexus.py`: Unit tests for the functions in `Fasta_to_Nexus.py`.
 
 ## Usage
 The Fasta_to_Nexus script takes three arguments, the name of the fasta file to convert, the number of generations for the MrBayes block, and the outgroup also for the MrBayes block. Only the fasta file is requred, the ngen has the default value of 5000, and the outgroup defaults to "Placeholder Outgroup". For Linux, an example of how to run the script is:
