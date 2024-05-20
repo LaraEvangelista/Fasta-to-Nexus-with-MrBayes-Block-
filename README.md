@@ -1,6 +1,6 @@
 ## Fasta to Nexus with MrBayes Block -
 This repository contains a Python script that converts a FASTA file to a NEXUS file format with a MrBayes block for phylogenetic analysis.
-Project developed in 'Análise de Sequências Biológicas' (Analysis of Biological Sequences), in context of pursuing a Bioinformatics Degree.
+Project developed in 'Análise de Sequências Biológicas' (Analysis of Biological Sequences), in context of pursuing a Bioinformatics Degree. I was motived to create this simple script after being assigned a homework in said class to write it, and also due to my neccessity of a reliable way to convert fasta files to nexus without using a lot of outside software or bloating my code.
 
 ## Files
 - `Fasta_to_Nexus.py`: Main script to convert FASTA to NEXUS, appending a MrBayes block and printing it to the console. 
