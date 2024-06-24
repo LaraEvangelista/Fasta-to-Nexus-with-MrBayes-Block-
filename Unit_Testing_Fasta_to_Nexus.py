@@ -19,7 +19,7 @@ class Test_Fasta_To_Nexus(unittest.TestCase):
         with open("test.fasta", "w") as f:
             f.write(test_fasta)
         expected_output = {"seq1": "ATGC", "seq2": "A--C"}
-        self.assertEqual(Homework.parse_fasta("test.fasta"), expected_output)
+        self.assertEqual(Fasta_to_Nexus.parse_fasta("test.fasta"), expected_output)
         os.remove("test.fasta")
 
     def test_nexus_data_header(self):
@@ -40,7 +40,7 @@ class Test_Fasta_To_Nexus(unittest.TestCase):
             "FORMAT DATATYPE=DNA MISSING=N GAP=-;\n"
             "MATRIX\n"
         )
-        self.assertEqual(Homework.nexus_data_header(sequences), expected_output)
+        self.assertEqual(Fasta_to_Nexus.nexus_data_header(sequences), expected_output)
 
     def test_nexus_matrix(self):
         """
@@ -58,7 +58,7 @@ class Test_Fasta_To_Nexus(unittest.TestCase):
             "seq2\tA--C\n"
             ";\nEND;\n"
         )
-        self.assertEqual(Homework.nexus_matrix(sequences), expected_output)
+        self.assertEqual(Fasta_to_Nexus.nexus_matrix(sequences), expected_output)
 
     def test_mrbayes_block(self):
         """
@@ -85,7 +85,7 @@ class Test_Fasta_To_Nexus(unittest.TestCase):
             f"  sumt filename=Test;\n"
             "end;\n"
         )
-        self.assertEqual(Homework.mrbayes_block(test_file, ngen, outgroup), expected_output)
+        self.assertEqual(Fasta_to_Nexus.mrbayes_block(test_file, ngen, outgroup), expected_output)
 
 if __name__ == "__main__":
     unittest.main()
